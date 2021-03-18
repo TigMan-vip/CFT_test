@@ -8,7 +8,11 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.example_item.view.*
 
-class ValuteAdapter(private val valutelist: ArrayList<valuteMoodelClass>): RecyclerView.Adapter<ValuteAdapter.ValuteViewHolder>(){
+class ValuteAdapter(
+    private val valutelist: ArrayList<valuteMoodelClass>,
+    private val listener: OnItemsClickListener
+):
+    RecyclerView.Adapter<ValuteAdapter.ValuteViewHolder>(){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ValuteViewHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.example_item,
@@ -27,13 +31,30 @@ class ValuteAdapter(private val valutelist: ArrayList<valuteMoodelClass>): Recyc
     }
 
     override fun getItemCount() = valutelist.size
-    class ValuteViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
+
+    inner class ValuteViewHolder(itemView: View): RecyclerView.ViewHolder(itemView),
+    View.OnClickListener{
+
         val id: TextView = itemView.ID_valute
         val numcode: TextView = itemView.numcode_valute
         val nominal: TextView = itemView.nominal_valute
         val name: TextView = itemView.name_valute
         val value: TextView = itemView.value_valute
         val charcode: TextView = itemView.charcode_valute
+
+        init {
+            itemView.setOnClickListener(this)
+        }
+
+        override fun onClick(v: View?) {
+            val position = adapterPosition
+            if (position != RecyclerView.NO_POSITION) {
+                listener.onItemClick(position)
+            }
+        }
+    }
+    interface  OnItemsClickListener{
+        fun  onItemClick(position: Int)
     }
 }
 

@@ -7,7 +7,8 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="213dp"
+        android:background="#5CF3E6">
 
         <TextView
             android:layout_width="wrap_content"
@@ -17,7 +18,9 @@
             android:layout_marginStart="12dp"
             android:layout_marginTop="1dp"
             android:text="ID:"
-            android:textSize="20dp" />
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -25,45 +28,70 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_marginStart="12dp"
-            android:layout_marginTop="35dp"
-            android:text="NumeCod:"
-            android:textSize="20dp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="72dp"
+            android:layout_marginTop="62dp"
             android:text="CharCode:"
-            android:textSize="20dp" />
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
         <TextView
+            android:id="@+id/charcode_valute"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="105dp"
-            android:text="Nominal:"
-            android:textSize="20dp" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="135dp"
-            android:text="Name:"
-            android:textSize="20dp" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="170dp"
+            android:layout_marginStart="138dp"
+            android:layout_marginTop="62dp"
             android:text="Value:"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="91dp"
+            android:text="Nominal:"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/nominal_valute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="132dp"
+            android:layout_marginTop="91dp"
+            android:text="Value:"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="120dp"
+            android:text="Name:"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/name_valute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="109dp"
+            android:layout_marginTop="120dp"
+            android:text="Value:"
+            android:textColor="@color/black"
             android:textSize="20dp" />
 
         <TextView
@@ -75,6 +103,7 @@
             android:layout_marginStart="65dp"
             android:layout_marginTop="2dp"
             android:text="Value:"
+            android:textColor="@color/black"
             android:textSize="20dp" />
 
         <TextView
@@ -84,42 +113,22 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_marginStart="138dp"
-            android:layout_marginTop="35dp"
+            android:layout_marginTop="31dp"
             android:text="Value:"
+            android:textColor="@color/black"
             android:textSize="20dp" />
 
         <TextView
-            android:id="@+id/charcode_valute"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="138dp"
-            android:layout_marginTop="72dp"
-            android:text="Value:"
-            android:textSize="20dp" />
-
-        <TextView
-            android:id="@+id/nominal_valute"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="132dp"
-            android:layout_marginTop="105dp"
-            android:text="Value:"
-            android:textSize="20dp" />
-
-        <TextView
-            android:id="@+id/name_valute"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="109dp"
-            android:layout_marginTop="135dp"
-            android:text="Value:"
-            android:textSize="20dp" />
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="31dp"
+            android:text="NumeCod:"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/value_valute"
@@ -128,9 +137,22 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_marginStart="105dp"
-            android:layout_marginTop="169dp"
+            android:layout_marginTop="178dp"
             android:text="Value:"
+            android:textColor="@color/black"
             android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="179dp"
+            android:text="Value:"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold" />
 
 
     </RelativeLayout>
