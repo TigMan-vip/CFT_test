@@ -21,21 +21,24 @@ import java.net.URL
 
 
 const val BASE_URL = "https://www.cbr-xml-daily.ru/"
-lateinit var valy: String
+
+val valuteList: ArrayList<valuteMoodelClass> = ArrayList()
 
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val recyclerView: RecyclerView = recyclerview
-        recyclerView.layoutManager = LinearLayoutManager(this)
-        GlobalScope.launch(Dispatchers.IO) {
-            val response = getRetrofit().getValuteInf().execute()
-            val data: JsonText = response.body()!!
 
-                    Log.d("MyLog", "${data.valute.aMD}")
+        GlobalScope.launch(Dispatchers.IO) {
+            /*val response = getRetrofit().getValuteInf().execute()
+            val data: JsonText = response.body()!!*/
+            getJson()
         }
+
+            recycler_view.adapter = ValuteAdapter(valuteList)
+            recycler_view.layoutManager = LinearLayoutManager(this@MainActivity)
+
 
     }
 }
@@ -48,9 +51,8 @@ fun getRetrofit(): ApiService {
         .create(ApiService::class.java)
 }
 
-/*fun getJson() {
-    val valuteList: ArrayList<valuteMoodelClass> = ArrayList()
-    val valuteName: Array<String> = arrayOf("AUD", "AZN", "GBP", "AMD", "AMD","BYN")
+fun getJson() {
+    val valuteName: Array<String> = arrayOf("AUD", "AZN", "GBP", "AMD","BYN")
     val url = "https://www.cbr-xml-daily.ru/daily_json.js"
     val jsonText = URL(url).readText()
     val obj = JSONObject(jsonText)
@@ -68,5 +70,5 @@ fun getRetrofit(): ApiService {
         val valuteDetails = valuteMoodelClass(id, numCod, charCode, nominal, name, value, previous)
         valuteList.add(valuteDetails)
     }
-    Log.d("MyLog", "${valuteList.get(0)}")
-}*/
+    //Log.d("MyLog", "${valuteList}")
+}

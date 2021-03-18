@@ -1,6 +1,6 @@
 package com.example.testing
 
-/*class valuteMoodelClass (
+data class valuteMoodelClass (
     val ID:String,
     val NumCode: String,
     val CharCode: String,
@@ -8,4 +8,4 @@ package com.example.testing
     val Name: String,
     val Value: Double,
     val Previous: Double
-)*/
+)
