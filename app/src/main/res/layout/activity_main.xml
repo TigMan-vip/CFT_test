@@ -13,7 +13,9 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="150dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginBottom="136dp"
         android:clipToPadding="false"
         android:padding="10dp"
         tools:listitem="@layout/example_item" />
@@ -32,12 +34,12 @@
 
     <TextView
         android:id="@+id/textViewResult"
-        android:layout_width="110dp"
+        android:layout_width="198dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="192dp"
-        android:layout_marginBottom="65dp"
+        android:layout_marginStart="201dp"
+        android:layout_marginBottom="68dp"
         android:textColor="@color/black"
         android:textSize="18sp" />
 
@@ -47,8 +49,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="50dp"
-        android:layout_marginBottom="61dp"
+        android:layout_marginStart="53dp"
+        android:layout_marginBottom="55dp"
         android:ems="10"
         android:inputType="date"
         android:text="0"
@@ -66,5 +68,26 @@
         android:textColor="@color/black"
         android:textSize="18sp"
         android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="17dp"
+        android:layout_marginBottom="14dp"
+        android:text="Список обновляется каждые три минуты."
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="101dp"
+        android:text="Введите значение и выберите валюту из списка" />
 
 </RelativeLayout>

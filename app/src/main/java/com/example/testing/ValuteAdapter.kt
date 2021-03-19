@@ -1,6 +1,5 @@
 package com.example.testing
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -34,7 +33,6 @@ class ValuteAdapter(
 
     inner class ValuteViewHolder(itemView: View): RecyclerView.ViewHolder(itemView),
     View.OnClickListener{
-
         val id: TextView = itemView.ID_valute
         val numcode: TextView = itemView.numcode_valute
         val nominal: TextView = itemView.nominal_valute
